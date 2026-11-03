@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLACKBARN Restaurant, New York | KezTech Demo Concept</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Georgia,serif;color:#26221e;background:#faf8f4;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.banner{background:#171512;color:#fff;text-align:center;padding:12px 16px;font-family:Arial,sans-serif;font-size:14px}
+.hero{background:linear-gradient(135deg,#1e1a16,#5a3d22);color:#fff;padding:64px 0 56px}
+.hero h1{font-size:46px;line-height:1.1;margin:8px 0}.hero p{font-size:19px;max-width:720px;opacity:.95}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:13px;font-family:Arial,sans-serif}
+.btn{display:inline-block;background:#d9a441;color:#1e1a16;text-decoration:none;padding:13px 22px;border-radius:8px;font-weight:700;font-family:Arial,sans-serif}
+section{padding:44px 0}h2{font-size:32px;margin:0 0 10px}.muted{color:#5f5a53}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.card{border:1px solid #e5ddd0;background:#fff;border-radius:14px;padding:22px}
+.card.good{border-top:6px solid #2f7a4d}.card.old{border-top:6px solid #b0a491}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px}
+.feature{background:#fff;border:1px solid #e5ddd0;border-radius:14px;padding:20px}
+form{background:#fff;border:1px solid #e5ddd0;border-radius:16px;padding:26px;margin-top:18px}
+label{display:block;font-family:Arial,sans-serif;font-weight:700;margin:14px 0 6px}
+input,select,textarea{width:100%;padding:12px;border:1px solid #c9bfac;border-radius:8px;font-size:16px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+button{background:#1e1a16;color:#fff;border:0;padding:14px 24px;border-radius:8px;font-size:16px;font-weight:700;cursor:pointer}
+.confirm{display:none;background:#eaf5ee;border:1px solid #2f7a4d;border-radius:12px;padding:20px;margin-top:18px}
+.confirm h3{margin-top:0}.note{font-size:14px;color:#5f5a53;font-family:Arial,sans-serif}
+.faq details{background:#fff;border:1px solid #e5ddd0;border-radius:10px;padding:14px 18px;margin:10px 0}
+footer{border-top:1px solid #e5ddd0;padding:24px 0 40px;color:#5f5a53;font-family:Arial,sans-serif;font-size:14px}
+@media(max-width:700px){.grid,.features,.two{grid-template-columns:1fr}.hero h1{font-size:36px}}
+</style>
+</head>
+<body>
+<div class="banner">KezTech Solution demo concept for BLACKBARN Restaurant. This is not the official site.</div>
+<header class="hero"><div class="wrap">
+<p class="eyebrow">BLACKBARN Restaurant &middot; 19 East 26th Street, New York, NY &middot; Modern American</p>
+<h1>Private events and group gatherings, enquired about in minutes.</h1>
+<p>For groups of 12 to 300, and buyouts to 500, send one written enquiry with your date, group size, and event type, and get a clear next step back. No need to start by email or phone and wait to begin.</p>
+<p><a class="btn" href="#enquiry">Start a private events enquiry</a></p>
+</div></header>
+
+<main class="wrap">
+<section>
+<h2>Before vs this demo</h2>
+<p class="muted">This demo fixes one gap only: private events and group enquiries were by email or phone only, with no enquiry form.</p>
+<div class="grid">
+<div class="card old"><h3>Before</h3><p><strong>Email or phone only</strong></p><p>To ask about a group or buyout, a guest had to write an email or make a call, then wait to learn what details the team needed next.</p></div>
+<div class="card good"><h3>This demo</h3><p><strong>One enquiry form</strong></p><p>Choose your event type, add your date and group size, and send the request in under a minute. The confirmation shows on screen right away, with a reference to keep.</p></div>
+</div>
+</section>
+
+<section>
+<h2>What the enquiry covers</h2>
+<div class="features">
+<div class="feature"><h3>Groups of 12 to 300</h3><p>Private dining and group gatherings, with your group size noted up front so the reply can be specific.</p></div>
+<div class="feature"><h3>Buyouts to 500</h3><p>A clear buyout option in the same form, for larger events that need the full space.</p></div>
+<div class="feature"><h3>Your date, first</h3><p>Start with the date you have in mind, so the conversation begins with availability, not a long back and forth.</p></div>
+</div>
+</section>
+
+<section id="enquiry">
+<h2>Private events and group enquiry</h2>
+<p class="muted">Fill in what you know. You can leave the message short and add details later.</p>
+<form id="form">
+<div class="two">
+<div><label for="name">Full name *</label><input id="name" required></div>
+<div><label for="email">Email *</label><input id="email" type="email" required></div>
+</div>
+<div class="two">
+<div><label for="phone">Phone</label><input id="phone" type="tel"></div>
+<div><label for="date">Preferred event date *</label><input id="date" type="date" required></div>
+</div>
+<div class="two">
+<div><label for="guests">Number of guests *</label><input id="guests" type="number" min="1" required></div>
+<div><label for="type">Event type *</label><select id="type" required>
+<option value="">Choose one</option><option>Private dining</option><option>Group event (12 to 300)</option><option>Full buyout (to 500)</option><option>Celebration</option><option>Business gathering</option><option>Other private event</option>
+</select></div>
+</div>
+<label for="msg">Tell us about your event</label>
+<textarea id="msg" rows="4" placeholder="For example: evening or daytime, any timing notes, anything the team should know."></textarea>
+<p><button type="submit">Send enquiry</button></p>
+<p class="note">Demo form only. Nothing is sent to a server. On a live site, this would go straight to the BLACKBARN team by email.</p>
+</form>
+<div class="confirm" id="confirm"><h3>Enquiry received</h3><p><strong>Reference:</strong> <span id="ref"></span></p><p id="summary"></p><p>Thank you. On a live site, the BLACKBARN team would reply with availability and next steps.</p></div>
+</section>
+
+<section class="faq">
+<h2>Common questions</h2>
+<details><summary><strong>Is this the official BLACKBARN website?</strong></summary><p>No. This is a demo concept built by KezTech Solution to show how a private events enquiry form could work. It is not the official site for BLACKBARN Restaurant.</p></details>
+<details><summary><strong>Does sending this form book my event?</strong></summary><p>No. This is an enquiry, not a booking. On a live version, the team would confirm availability and next steps in writing.</p></details>
+<details><summary><strong>What group sizes does this form cover?</strong></summary><p>Groups of 12 to 300, and buyouts to 500, as listed for BLACKBARN private events. Enter your best estimate if your final count is not set yet.</p></details>
+<details><summary><strong>Can I still email or call instead?</strong></summary><p>Yes. This page simply adds an online option. Email and phone remain available for anyone who prefers them.</p></details>
+</section>
+</main>
+
+<footer><div class="wrap">
+<p>KezTech Solution demo concept for BLACKBARN Restaurant, 19 East 26th Street, New York, NY. This page is a front-end demo only. Nothing submitted here is sent to a server or to the business.</p>
+<p>Our work: <a href="https://keztech-portfolio.vercel.app">keztech-portfolio.vercel.app</a></p>
+</div></footer>
+
+<script>
+document.getElementById('form').addEventListener('submit', function(e){
+e.preventDefault();
+var ref='BB-'+Math.random().toString(36).slice(2,7).toUpperCase();
+document.getElementById('ref').textContent=ref;
+document.getElementById('summary').textContent='Thank you, '+document.getElementById('name').value+'. Your enquiry for '+document.getElementById('date').value+' for '+document.getElementById('guests').value+' guests ('+document.getElementById('type').value+') has been noted in this demo.';
+var c=document.getElementById('confirm'); c.style.display='block'; c.scrollIntoView({behavior:'smooth'});
+});
+</script>
+</body>
+</html>
